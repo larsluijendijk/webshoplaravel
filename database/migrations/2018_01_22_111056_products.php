@@ -18,7 +18,7 @@ class Products extends Migration
             $table->string('name');
             $table->string('description');
             $table->string('image');
-            $table->integer('price');
+            $table->string('price');
             $table->string('category');
             });
     }

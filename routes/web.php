@@ -15,3 +15,5 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/products/index', 'ProductsController@index')->name('productsindex')->middleware('auth');
+Route::get('/products/cart', 'ProductsController@cart')->name('productscart')->middleware('auth');
+Route::get('/products/create', 'ProductsController@create')->name('productscreate')->middleware('auth');
