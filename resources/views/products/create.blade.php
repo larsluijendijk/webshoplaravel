@@ -6,11 +6,10 @@
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
                 <div class="panel-heading">Create Product</div>
-                {!! session('warning') !!}
                 <div class="panel-body">
 
-                    <form action="{{ URL::to('createAction') }}" method="post" enctype="multipart/form-data">
-
+                    <form action="{{ URL::to('insert') }}" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="form-group">
                         <label for="Name">Name</label>
                         <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter Name" name="name">
